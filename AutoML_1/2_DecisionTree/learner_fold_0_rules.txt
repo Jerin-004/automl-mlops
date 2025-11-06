@@ -1,0 +1,8 @@
+if (feature_4 > 0.7) and (feature_3 <= 5.05) and (feature_4 <= 1.6) then class: 1 (proba: 96.3%) | based on 27 samples
+
+if (feature_4 > 0.7) and (feature_3 > 5.05) then class: 2 (proba: 100.0%) | based on 23 samples
+
+if (feature_4 <= 0.7) then class: 0 (proba: 100.0%) | based on 23 samples
+
+if (feature_4 > 0.7) and (feature_3 <= 5.05) and (feature_4 > 1.6) then class: 2 (proba: 60.0%) | based on 5 samples
+

@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
+import numpy as np
 
 model = joblib.load("model.pkl")
 
@@ -14,6 +15,6 @@ class IrisInput(BaseModel):
 
 @app.post("/predict")
 def predict(data: IrisInput):
-    X = [[data.sepal_length, data.sepal_width, data.petal_length, data.petal_width]]
+    X = np.array([[data.sepal_length, data.sepal_width, data.petal_length, data.petal_width]])
     result = model.predict(X)[0]
     return {"predicted_class": int(result)}
