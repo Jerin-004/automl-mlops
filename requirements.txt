@@ -1,0 +1,5 @@
+mljar-supervised
+fastapi
+uvicorn
+scikit-learn
+joblib
